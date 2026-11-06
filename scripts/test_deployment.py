@@ -4,6 +4,7 @@ from pathlib import Path
 import subprocess
 import sys
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
@@ -63,9 +64,13 @@ class ProductionChecks(unittest.TestCase):
 
 @unittest.skipUnless(os.getenv("RUN_MYSQL_INTEGRATION") == "true", "Requires a disposable MySQL database")
 class MySQLChecks(unittest.TestCase):
+    def setUp(self):
+        environment = patch.dict(os.environ, {"APP_ENV": "test"})
+        environment.start()
+        self.addCleanup(environment.stop)
+
     def test_bootstrap_login_refresh_logout_and_restart(self):
         # CI uses its own disposable database; never point it at live user records.
-        os.environ.pop("APP_ENV", None)
         sys.path.insert(0, str(ROOT / "scripts"))
         from bootstrap_cloud import main
         from db import one_row, session
