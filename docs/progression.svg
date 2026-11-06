@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="180" viewBox="0 0 960 180" role="img" aria-label="ER model to draft tables to normalization to final schema to MySQL SQL">
+  <rect width="960" height="180" rx="16" fill="#172636"/>
+  <text x="35" y="38" fill="#e7c3a7" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="2">THE DBMS BUILD SEQUENCE</text>
+  <g font-family="Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle">
+    <rect x="34" y="69" width="150" height="70" rx="9" fill="#f8f5ef"/>
+    <text x="109" y="110" fill="#203545">ER model</text>
+    <rect x="220" y="69" width="150" height="70" rx="9" fill="#f8f5ef"/>
+    <text x="295" y="110" fill="#203545">Draft tables</text>
+    <rect x="406" y="69" width="150" height="70" rx="9" fill="#f8f5ef"/>
+    <text x="481" y="110" fill="#203545">Normalization</text>
+    <rect x="592" y="69" width="150" height="70" rx="9" fill="#f8f5ef"/>
+    <text x="667" y="110" fill="#203545">Final schema</text>
+    <rect x="778" y="69" width="150" height="70" rx="9" fill="#f8f5ef"/>
+    <text x="853" y="110" fill="#203545">MySQL SQL</text>
+  </g>
+  <g stroke="#d4a07d" stroke-width="3" fill="none">
+    <path d="M184 104 H216 M370 104 H402 M556 104 H588 M742 104 H774"/>
+  </g>
+  <g fill="#d4a07d">
+    <path d="M216 104 l-9 -6 v12z M402 104 l-9 -6 v12z M588 104 l-9 -6 v12z M774 104 l-9 -6 v12z"/>
+  </g>
+</svg>
